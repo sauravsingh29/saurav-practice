@@ -1,0 +1,28 @@
+/**
+ * Created by Saurav on 10-04-2017.
+ */
+public class ThredTest implements Runnable {
+
+    public static void main(String[] args) {
+        ThredTest thredTest = new ThredTest();
+        Thread thread = new Thread(thredTest);
+        thread.start();
+    }
+
+
+    /**
+     * When an object implementing interface <code>Runnable</code> is used
+     * to create a thread, starting the thread causes the object's
+     * <code>run</code> method to be called in that separately executing
+     * thread.
+     * <p>
+     * The general contract of the method <code>run</code> is that it may
+     * take any action whatsoever.
+     *
+     * @see Thread#run()
+     */
+    @Override
+    public void run() {
+        System.out.println("Running method Run");
+    }
+}
